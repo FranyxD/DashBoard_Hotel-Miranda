@@ -19,7 +19,7 @@ module.exports = {
           //'white': '#f0f0f0',
         },
         fontFamily: {
-          //'italiana': ['Italiana']
+          'poppins': ['Poppins']
         },
       },
     },

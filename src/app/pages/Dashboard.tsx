@@ -147,9 +147,11 @@ const Dashboard = () => {
       </section>
 
       {/* LATEST REVIEW BY CUSTOMERS */}
-      <section className="latest-reviews dark:bg-myBlack">
+      <section className="latest-reviews mb-[5%] dark:bg-myBlack ">
         <h3>Latest Review By Customers</h3>
       </section>
+
+      
     </main>
   );
 };

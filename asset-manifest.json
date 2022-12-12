@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/DashBoard_Hotel-Miranda/static/css/main.aad9c958.css",
+    "main.js": "/DashBoard_Hotel-Miranda/static/js/main.f52e59de.js",
+    "static/js/787.42fd7b3a.chunk.js": "/DashBoard_Hotel-Miranda/static/js/787.42fd7b3a.chunk.js",
+    "static/media/Francisco_Fuertes_Valls.png": "/DashBoard_Hotel-Miranda/static/media/Francisco_Fuertes_Valls.e69f62f0739930bf2c66.png",
+    "static/media/hotel.svg": "/DashBoard_Hotel-Miranda/static/media/hotel.cbef9585f5168086926d6bf9ffe644f7.svg",
+    "static/media/booking.svg": "/DashBoard_Hotel-Miranda/static/media/booking.acc43f2914772be15c942ed7de2b9d5f.svg",
+    "static/media/guest.svg": "/DashBoard_Hotel-Miranda/static/media/guest.9a622e5001e78f7ba2054192a9b92557.svg",
+    "static/media/bed.svg": "/DashBoard_Hotel-Miranda/static/media/bed.55f9440b17c5a1232c2762c4c13e2a3a.svg",
+    "static/media/key.svg": "/DashBoard_Hotel-Miranda/static/media/key.f013c26398893845351cdacafe516570.svg",
+    "index.html": "/DashBoard_Hotel-Miranda/index.html",
+    "static/media/arrow-right.svg": "/DashBoard_Hotel-Miranda/static/media/arrow-right.5a060c1dd94a9cd4c544b71b2f33b886.svg",
+    "static/media/chat.svg": "/DashBoard_Hotel-Miranda/static/media/chat.6e77a0d0efc03583b605ae1f40f16f0c.svg",
+    "static/media/mail.svg": "/DashBoard_Hotel-Miranda/static/media/mail.663c3a0d5ac70b67de3e65a2e47cb0b0.svg",
+    "static/media/bell.svg": "/DashBoard_Hotel-Miranda/static/media/bell.8ab340595ef29d450e3afe65a3a09a0f.svg",
+    "static/media/concierge.svg": "/DashBoard_Hotel-Miranda/static/media/concierge.8f5ce27d9058deddb73101d3fe37f16d.svg",
+    "static/media/checkin.svg": "/DashBoard_Hotel-Miranda/static/media/checkin.26c410ff9096654673d881dfd34e96a1.svg",
+    "static/media/hearth.svg": "/DashBoard_Hotel-Miranda/static/media/hearth.493cc2fa02fa90db9cbac06cfb3f69b4.svg",
+    "static/media/checkout.svg": "/DashBoard_Hotel-Miranda/static/media/checkout.3900af3955e7891fbff745d07c938ee1.svg",
+    "static/media/dashboard.svg": "/DashBoard_Hotel-Miranda/static/media/dashboard.8fca957e29c5c1981593dc2f4ec34685.svg",
+    "static/media/search.svg": "/DashBoard_Hotel-Miranda/static/media/search.ecdf8ec7c4f054fbcbfe4af53be7c8a2.svg",
+    "main.aad9c958.css.map": "/DashBoard_Hotel-Miranda/static/css/main.aad9c958.css.map",
+    "main.f52e59de.js.map": "/DashBoard_Hotel-Miranda/static/js/main.f52e59de.js.map",
+    "787.42fd7b3a.chunk.js.map": "/DashBoard_Hotel-Miranda/static/js/787.42fd7b3a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aad9c958.css",
+    "static/js/main.f52e59de.js"
+  ]
+}

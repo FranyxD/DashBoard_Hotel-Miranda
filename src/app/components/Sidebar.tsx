@@ -9,11 +9,9 @@ import { ReactComponent as Booking } from "../../assets/svg/booking.svg";
 import { ReactComponent as Guest } from "../../assets/svg/guest.svg";
 import { ReactComponent as Concierge } from "../../assets/svg/concierge.svg";
 import profile from "../../assets/img/Francisco_Fuertes_Valls.png";
+import { NavLink } from "react-router-dom";
+import { SidebarProps } from "../interfaces";
 
-interface SidebarProps {
-  darkMode: boolean,
-  changeTheme: () => void,
-}
 
 const Sidebar = ({darkMode, changeTheme}:SidebarProps) => {
   return (
@@ -33,11 +31,11 @@ const Sidebar = ({darkMode, changeTheme}:SidebarProps) => {
         <ul className="flex w-full flex-col gap-y-8">
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Dashboard className="h-6 w-6 fill-green-600" />
-            Dashboard
+            <NavLink to="/">DashBoard</NavLink>
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Key className="h-6 w-6 fill-green-600" />
-            Rooms
+            <NavLink to="/guestdetails">Rooms</NavLink>
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Booking className="h-6 w-6 fill-green-600" />

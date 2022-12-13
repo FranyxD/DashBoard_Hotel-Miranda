@@ -8,7 +8,7 @@ import profile from "../../assets/img/Francisco_Fuertes_Valls.png";
 
 const Header = () => {
   return (
-    <header className="header  inline-flex h-auto w-full items-center gap-[5%] p-[1.5%] shadow">
+    <header className="header bg-white  inline-flex h-auto w-full items-center gap-[5%] p-[1.5%] shadow">
       {/* ICONO BURGER */}
       <div className="burger flex flex-col gap-1">
         <div className="burger__line h-[2px] w-4 rounded-full bg-black"></div>

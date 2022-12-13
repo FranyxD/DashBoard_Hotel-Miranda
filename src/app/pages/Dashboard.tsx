@@ -4,22 +4,24 @@ import styled from "styled-components";
 import BookingSchedule from "../components/dashboard/BookingSchedule";
 import Graphic from "../components/dashboard/Graphic";
 
+import { FlexCol } from "../styles";
+
+import profile from "../../assets/img/Francisco_Fuertes_Valls.png";
 import { ReactComponent as Bed } from "../../assets/svg/bed.svg";
 import { ReactComponent as Schedule } from "../../assets/svg/booking.svg";
 import { ReactComponent as CheckIn } from "../../assets/svg/checkin.svg";
 import { ReactComponent as CheckOut } from "../../assets/svg/checkout.svg";
 import { ReactComponent as RightArrow } from "../../assets/svg/arrow-right.svg";
+import { ReactComponent as Accept} from "../../assets/svg/accept.svg";
+import { ReactComponent as Deny} from "../../assets/svg/deny.svg";
 
-const FlexCol = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+
 const Dashboard = () => {
   return (
     <main className="dashboard bg-white dark:bg-black dark:text-white">
       {/* FILA DE DATAS */}
       {/* NEW BOOKING */}
-      <section className="new-booking flex items-center justify-center gap-5 dark:bg-myBlack">
+      <section className="new-booking flex items-center justify-start gap-5 dark:bg-myBlack">
         <div className="bed flex h-12 w-12 items-center justify-center rounded bg-red-300">
           <Bed className="h-6 w-6" />
         </div>
@@ -29,8 +31,8 @@ const Dashboard = () => {
         </FlexCol>
       </section>
       {/* SCHEDULE ROOM */}
-      <section className="schedule-room flex items-center justify-center gap-5 dark:bg-myBlack">
-        <div className="bed flex h-12 w-12 items-center justify-center rounded bg-red-300">
+      <section className="schedule-room flex items-center justify-start gap-5 dark:bg-myBlack">
+        <div className="bed flex h-12 w-12 items-center justify-center rounded bg-myRed">
           <Schedule className="h-6 w-6" />
         </div>
         <FlexCol>
@@ -39,7 +41,7 @@ const Dashboard = () => {
         </FlexCol>
       </section>
       {/* CHECK IN */}
-      <section className="check-in  flex items-center justify-center gap-5 dark:bg-myBlack">
+      <section className="check-in  flex items-center justify-start gap-5 dark:bg-myBlack">
         <div className="bed flex h-12 w-12 items-center justify-center rounded bg-red-300">
           <CheckIn className="h-6 w-6" />
         </div>
@@ -49,7 +51,7 @@ const Dashboard = () => {
         </FlexCol>
       </section>
       {/* CHECK OUT */}
-      <section className="check-out  flex items-center justify-center gap-5 dark:bg-myBlack">
+      <section className="check-out  flex items-center justify-start gap-5 dark:bg-myBlack">
         <div className="bed flex h-12 w-12 items-center justify-center rounded bg-red-300">
           <CheckOut className="h-6 w-6" />
         </div>
@@ -148,7 +150,24 @@ const Dashboard = () => {
 
       {/* LATEST REVIEW BY CUSTOMERS */}
       <section className="latest-reviews mb-[5%] dark:bg-myBlack ">
-        <h3>Latest Review By Customers</h3>
+        <h2 className="mb-[2.5%] text-xl">Latest Review By Customers</h2>
+        <div className="reviews flex gap-[5%]">
+          {
+            [1, 2, 3].map(item => <article>
+
+              <p className="mb-[5%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, perspiciatis dignissimos dolor et autem veritatis</p>
+              <div className="person flex items-center gap-[5%]">
+                <img className="h-12 w-12 rounded object-cover" src={profile} alt="" />
+                <div className="data flex flex-col place-items-center">
+                  <h5 className="text-sm text-center">Kusnaidi Anderson</h5>
+                  <span className="text-[12px]">4m ago</span>
+                </div>
+                <Accept className="w-6 h-6"/>
+                <Deny className="w-6 h-6"/>
+              </div>
+            </article>)
+          }
+        </div>
       </section>
 
       

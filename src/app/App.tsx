@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import {Routes, Route} from "react-router-dom";
-import '../App.css';
-import './layout/dashboard.css';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route, createBrowserRouter } from "react-router-dom";
+import "../App.css";
+import "./layout/dashboard.css";
 
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
-import Dashboard from './pages/Dashboard';
+import Dashboard from "./pages/Dashboard";
+import GuestDetails from "./pages/GuestDetails";
 
 function App() {
-
   const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
     if (
@@ -38,11 +38,17 @@ function App() {
     }
   };
 
+
   return (
     <>
-    <Header/>
-    <Sidebar darkMode={darkMode} changeTheme={changeTheme}/>
-    <Dashboard/>
+      <Header />
+      <Sidebar darkMode={darkMode} changeTheme={changeTheme} />
+      <Routes>
+        <Route index path="/" element={<Dashboard />} />
+        <Route path="DashBoard_Hotel-Miranda" element={<Dashboard />} />
+        <Route path="guestdetails" element={<GuestDetails />} />
+        DashBoard_Hotel-Miranda
+      </Routes>
     </>
   );
 }

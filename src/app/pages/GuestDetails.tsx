@@ -5,7 +5,7 @@ import 'swiper/css';
 import "swiper/css/navigation";
 import { Navigation } from "swiper";
 
-import '../layout/guest-details.css';
+import '../layout/swiper.css';
 
 import { FlexCol } from '../styles';
 
@@ -24,7 +24,7 @@ const GuestDetails = () => {
                     <h2>Roberto Mansini</h2>
                     <span>ID 1234567890</span>
                     {/* TWO BUTTONS */}
-                    <div className="buttons">
+                    <div className="buttons flex gap-5">
                         <button><img src="" alt="" />tel</button>
                         <button><img src="" alt="" />Send Message</button>
                     </div>
@@ -89,7 +89,7 @@ const GuestDetails = () => {
                 </select>
             </div>
             {
-                [0, 1].map(item => <div className="compras flex w-full justify-between items-center">
+                [0, 1].map(item => <div key={item} className="compras flex mb-5 w-full justify-between items-center">
                     <img src="" alt="" />
                     <FlexCol>
                         <h4>Deluxe A-91234</h4>

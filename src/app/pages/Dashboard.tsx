@@ -14,6 +14,8 @@ import { ReactComponent as CheckOut } from "../../assets/svg/checkout.svg";
 import { ReactComponent as RightArrow } from "../../assets/svg/arrow-right.svg";
 import { ReactComponent as Accept} from "../../assets/svg/accept.svg";
 import { ReactComponent as Deny} from "../../assets/svg/deny.svg";
+import Reviews from "./Reviews";
+import { NavLink } from "react-router-dom";
 
 
 const Dashboard = () => {
@@ -149,8 +151,11 @@ const Dashboard = () => {
       </section>
 
       {/* LATEST REVIEW BY CUSTOMERS */}
-      <section className="latest-reviews mb-[5%] dark:bg-myBlack ">
+      <section className="latest-reviews mb-[5%] dark:bg-myBlack">
+        <div className="first flex justify-between">
         <h2 className="mb-[2.5%] text-xl">Latest Review By Customers</h2>
+        <NavLink to="/reviews">Show more</NavLink>
+        </div>
         <div className="reviews flex gap-[5%]">
           {
             [1, 2, 3].map(item => <article>

@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import GuestDetails from "./pages/GuestDetails";
+import Reviews from "./pages/Reviews";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -45,9 +46,9 @@ function App() {
       <Sidebar darkMode={darkMode} changeTheme={changeTheme} />
       <Routes>
         <Route index path="/" element={<Dashboard />} />
-        <Route path="DashBoard_Hotel-Miranda" element={<Dashboard />} />
-        <Route path="guestdetails" element={<GuestDetails />} />
-        DashBoard_Hotel-Miranda
+        <Route path="/DashBoard_Hotel-Miranda" element={<Dashboard />} />
+        <Route path="/guestdetails" element={<GuestDetails />} />
+        <Route path="/reviews" element={<Reviews />} />
       </Routes>
     </>
   );

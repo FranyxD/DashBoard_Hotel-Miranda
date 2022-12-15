@@ -24,9 +24,9 @@ const Reviews = () => {
           className="mySwiper"
         >
           {
-            [0,1, 2, 3, 4, 5].map(item => <SwiperSlide className="dark:bg-myBlack rounded">
+            [0,1, 2, 3, 4, 5].map(item => <SwiperSlide key={item} className="dark:bg-myBlack rounded">
 
-              <article className="p-5">
+              <article  className="p-5">
               <p className="mb-[5%] text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, perspiciatis dignissimos dolor et autem veritatis</p>
               <div className="person flex items-center gap-[5%]">
                 <img className="w-12 rounded " src={require("../../assets/img/profileExample.jpeg")} alt="" />

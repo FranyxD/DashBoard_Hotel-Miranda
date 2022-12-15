@@ -1,5 +1,5 @@
 import React from "react";
-
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -11,6 +11,8 @@ import { Pagination } from "swiper";
 
 import { ReactComponent as Accept} from "../../assets/svg/accept.svg";
 import { ReactComponent as Deny} from "../../assets/svg/deny.svg";
+import ReviewsList from "../components/ReviewsList";
+import Tabs from "../components/Tabs";
 
 const Reviews = () => {
   return (
@@ -42,6 +44,13 @@ const Reviews = () => {
           }
         </Swiper>
       </section>
+
+      
+        <section>
+        <Tabs/>
+        </section>
+        
+      
     </main>
   );
 };

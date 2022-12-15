@@ -1,7 +1,9 @@
+// @ts-nocheck
 import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { response } from 'express';
 import MyContext from '../components/Context';
+
 
 const LogIn = ({login}) => {
 

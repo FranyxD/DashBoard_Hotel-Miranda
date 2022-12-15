@@ -1,5 +1,5 @@
 import React from "react";
-
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -11,6 +11,7 @@ import { Pagination } from "swiper";
 
 import { ReactComponent as Accept} from "../../assets/svg/accept.svg";
 import { ReactComponent as Deny} from "../../assets/svg/deny.svg";
+import ReviewsList from "../components/ReviewsList";
 
 const Reviews = () => {
   return (
@@ -24,9 +25,9 @@ const Reviews = () => {
           className="mySwiper"
         >
           {
-            [0,1, 2, 3, 4, 5].map(item => <SwiperSlide className="dark:bg-myBlack rounded">
+            [0,1, 2, 3, 4, 5].map(item => <SwiperSlide key={item} className="dark:bg-myBlack rounded">
 
-              <article className="p-5">
+              <article  className="p-5">
               <p className="mb-[5%] text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, perspiciatis dignissimos dolor et autem veritatis</p>
               <div className="person flex items-center gap-[5%]">
                 <img className="w-12 rounded " src={require("../../assets/img/profileExample.jpeg")} alt="" />
@@ -42,6 +43,10 @@ const Reviews = () => {
           }
         </Swiper>
       </section>
+
+      
+        <ReviewsList/>
+      
     </main>
   );
 };

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { response } from 'express';
 import MyContext from '../components/Context';
 
-const LogIn = () => {
+const LogIn = ({login}) => {
 
     const myContext = useContext(MyContext);
    const [name, setName] = useState('');
@@ -77,7 +77,7 @@ const LogIn = () => {
                 <div className="form">
                     <dialog className='backdrop:bg-red-600 w-[50%] h-[50%]' open={success ? true : false}>
                         <h1>Log in Succesfull</h1>
-                        <button onClick={toggleDialog}>OK</button>
+                        <button onClick={() => window.location.reload()}>OK</button>
                     </dialog>
                     <form id='iniciar' onSubmit={iniciar} className='flex p-5 flex-col gap-5' action="">
                     <legend>Iniciar Sesion</legend>

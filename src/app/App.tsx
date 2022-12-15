@@ -16,9 +16,9 @@ import Dashboard from "./pages/Dashboard";
 import GuestDetails from "./pages/GuestDetails";
 import Reviews from "./pages/Reviews";
 import LogIn from "./pages/LogIn";
-import { PrivateRoute } from "./components/PrivateRoute";
+import PrivateRoute from "./components/PrivateRoute";
 
-function App() {
+const App:any = () => {
 
   const [login, setLogin] = useState(
     localStorage.getItem("login") ? localStorage.getItem("login") : "false"
@@ -51,7 +51,7 @@ function App() {
   }
 };
 
-  console.log(login, MyContext)
+  //console.log(login, MyContext)
   useEffect(() => {
     
   }, [login, MyContext]);
@@ -64,6 +64,10 @@ function App() {
       <Sidebar darkMode={darkMode} changeTheme={changeTheme} />
     </>
   );
+
+  interface loginProp {
+    login: string
+  }
 
   return (
     <>
@@ -84,7 +88,8 @@ function App() {
                 <Route path="/reviews" element={<Reviews />} />
               </>
             ) : (
-              <Route path="/*" element={<LogIn />} />
+              // @ts-ignore
+              <Route path="/*" element={<LogIn login={login}/>} />
             )}
           </Routes>
         </MyContext.Provider>

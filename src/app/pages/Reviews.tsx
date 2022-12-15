@@ -15,6 +15,9 @@ import ReviewsList from "../components/ReviewsList";
 import Tabs from "../components/Tabs";
 
 const Reviews = () => {
+  const reviewsTabs = () => {
+    return <ReviewsList/>
+  }
   return (
     <main className="p-[2.5%] bg-white dark:bg-black dark:text-white">
       <section className="">
@@ -47,7 +50,10 @@ const Reviews = () => {
 
       
         <section>
-        <Tabs/>
+          {// @ts-ignore
+          <Tabs reviewsTabs={reviewsTabs}/>
+          }
+        
         </section>
         
       

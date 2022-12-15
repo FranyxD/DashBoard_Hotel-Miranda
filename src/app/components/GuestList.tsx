@@ -1,65 +1,25 @@
-import React, { useState } from "react";
-import { Tab } from '@headlessui/react'
+import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { Table } from "../styles";
 
-import {ReactComponent as Start} from "../../assets/svg/star.svg";
+const guests = [
+    {
+        id: 1,
+        firstName: 'John',
+        lastName: 'Doe',
+        phone: '(999) 999-999-9999',
+    },
+    {
+        id: 2,
+        firstName: 'John',
+        lastName: 'Doe',
+        phone: '(999) 999-999-9999',
+    }
+]
 
-const reorder = (list: any, startIndex: any, endIndex:any) => {
-  const result = [...list];
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
+const GuestList = () => {
+    const [guestList, setGuestList] = useState(guests);
 
-  return result;
-};
-
-const initialTasks = [
-  {
-    id: 1,
-    check: false,
-    date: "nov 8",
-    customer: "someone",
-    stars: 5,
-    comment: "Lorem ipsum dolor sit amet, consectetur adipis",
-    action: null,
-    text: "React.js",
-  },
-  {
-    id: 2,
-    check: false,
-    date: "nov 8",
-    customer: "someone",
-    stars: 5,
-    comment: "Lorem ipsum dolor sit amet, consectetur adipis",
-    action: null,
-    text: "React.js",
-  },
-  {
-    id: 3,
-    check: false,
-    date: "nov 8",
-    customer: "someone",
-    stars: 5,
-    comment: "Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis",
-    action: null,
-    text: "React.js",
-  },
-  {
-    id: 4,
-    check: false,
-    date: "nov 8",
-    customer: "someone",
-    stars: 5,
-    comment: "Lorem ipsum dolor sit amet, consectetur adipis",
-    action: null,
-    text: "React.js",
-  },
-];
-
-const ReviewsList = () => {
-    const [reviews, setReviews] = useState(initialTasks);
-
-  return (
+return (
     <DragDropContext
             onDragEnd={(result) => {
                   const { source, destination } = result;
@@ -98,8 +58,8 @@ const ReviewsList = () => {
                             ref={droppableProvided.innerRef}
                             className="task-container"
                         >
-                            {reviews.map((review, index) => (
-                                <Draggable key={review.id} draggableId={String(review.id)} index={index}>
+                            {guestList.map((guest, index) => (
+                                <Draggable key={guest.id} draggableId={String(guest.id)} index={index}>
                                     {(draggableProvided) => (
                                         <tr
                                             {...draggableProvided.draggableProps}
@@ -108,15 +68,15 @@ const ReviewsList = () => {
                                             className="task-item align-top"
                                         >
                                             <td className="w-[5%]"><input className="scale-150" type="checkbox" /></td>
-                                            <td className="w-1/12">#{review.id}</td>
-                                            <td className="w-2/12">{review.date}</td>
-                                            <td className="w-1/12">{review.customer}</td>
+                                            <td className="w-1/12">#{guest.id}</td>
+                                            <td className="w-2/12">{guest.date}</td>
+                                            <td className="w-1/12">{guest.customer}</td>
                                             <td className="w-4/12">
                                               <div className="comment">
                                                 <div className="stars flex gap-x-1 mb-2">
-                                                  {review.stars && [...Array(review.stars)].map((star, index) => <Start className="w-4" key={index}/>)}
+                                                  {guest.stars && [...Array(guest.stars)].map((star, index) => <Start className="w-4" key={index}/>)}
                                                 </div>
-                                              <p className="h-24 overflow-auto">{review.comment}</p>
+                                              <p className="h-24 overflow-auto">{guest.comment}</p>
                                               </div>
                                               </td>
                                             <td className="w-2/12">
@@ -135,7 +95,9 @@ const ReviewsList = () => {
                 </Droppable>
             </table>
         </DragDropContext>
-  );
-};
+)
 
-export default ReviewsList;
+
+}
+
+export default GuestList;

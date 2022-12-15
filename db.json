@@ -28,7 +28,44 @@
   ],
   "reviews" : [
     {
-      
+      "id": 1,
+      "check": false,
+      "date": "nov 8",
+      "customer": "someone",
+      "stars": 5,
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipis",
+      "action": null,
+      "text": "React.js"
+    },
+    {
+      "id": 2,
+      "check": false,
+      "date": "nov 8",
+      "customer": "someone",
+      "stars": 5,
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipis",
+      "action": null,
+      "text": "React.js"
+    },
+    {
+      "id": 3,
+      "check": false,
+      "date": "nov 8",
+      "customer": "someone",
+      "stars": 5,
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis Lorem ipsum dolor sit amet, consectetur adipis",
+      "action": null,
+      "text": "React.js"
+    },
+    {
+      "id": 4,
+      "check": false,
+      "date": "nov 8",
+      "customer": "someone",
+      "stars": 5,
+      "comment": "Lorem ipsum dolor sit amet, consectetur adipis",
+      "action": null,
+      "text": "React.js"
     }
   ]
 }

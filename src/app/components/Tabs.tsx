@@ -7,11 +7,11 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Tabs = () => {
+const Tabs = ({reviewsTabs}:any) => {
   return (
     <Tab.Group>
         {/* All customers reviews */}
-      <Tab.List className="my-[5%] flex gap-x-5 text-myGreen">
+      <Tab.List className="mb-[3%] mt-[5%] flex gap-x-5 text-myGreen">
         <Tab
           className={({ selected }) =>
             classNames(
@@ -39,21 +39,17 @@ const Tabs = () => {
             classNames(
               "border-b-2 pb-3 outline-none ",
               selected ? "border-myGreen" : "border-white"
-            )
-          }
-        >
-          Archived
-        </Tab>
+            )}>Archived</Tab>
       </Tab.List>
       <Tab.Panels>
         {/* All customers reviews */}
         <Tab.Panel>
-          <ReviewsList />
+          {reviewsTabs}
           {/* Revised */}
         </Tab.Panel>
-        <Tab.Panel>Content 2</Tab.Panel>
+        <Tab.Panel>{reviewsTabs}</Tab.Panel>
         {/* Archived */}
-        <Tab.Panel>Content 3</Tab.Panel>
+        <Tab.Panel>{reviewsTabs}</Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
   );

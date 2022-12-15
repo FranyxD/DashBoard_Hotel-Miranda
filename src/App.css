@@ -1,4 +1,5 @@
 @import url("./app/layout/dashboard.css");
+@import url("./app/layout/list.css");
 body {
     margin: 0;
     padding: 0;

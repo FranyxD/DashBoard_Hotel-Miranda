@@ -43,7 +43,7 @@ const Sidebar = ({darkMode, changeTheme}:SidebarProps) => {
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Guest className="h-6 w-6 fill-green-600" />
-            Guest
+            <NavLink to="/Guest">Guest</NavLink>
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Concierge className="h-6 w-6 fill-green-600" />

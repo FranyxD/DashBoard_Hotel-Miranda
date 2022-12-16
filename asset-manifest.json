@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DashBoard_Hotel-Miranda/static/css/main.d73c1067.css",
-    "main.js": "/DashBoard_Hotel-Miranda/static/js/main.628b5b57.js",
+    "main.css": "/DashBoard_Hotel-Miranda/static/css/main.85676924.css",
+    "main.js": "/DashBoard_Hotel-Miranda/static/js/main.ab8d4046.js",
     "static/js/787.42fd7b3a.chunk.js": "/DashBoard_Hotel-Miranda/static/js/787.42fd7b3a.chunk.js",
     "static/media/Francisco_Fuertes_Valls.png": "/DashBoard_Hotel-Miranda/static/media/Francisco_Fuertes_Valls.e69f62f0739930bf2c66.png",
     "static/media/exampleRoom.jpeg": "/DashBoard_Hotel-Miranda/static/media/exampleRoom.9cc6cd6c71480e7a8db3.jpeg",
@@ -11,6 +11,7 @@
     "static/media/guest.svg": "/DashBoard_Hotel-Miranda/static/media/guest.9a622e5001e78f7ba2054192a9b92557.svg",
     "static/media/bed.svg": "/DashBoard_Hotel-Miranda/static/media/bed.e93281fb3f6dda9185a329ad0ddff213.svg",
     "static/media/key.svg": "/DashBoard_Hotel-Miranda/static/media/key.f013c26398893845351cdacafe516570.svg",
+    "static/media/star.svg": "/DashBoard_Hotel-Miranda/static/media/star.4a68ba760f1783ff008b4a191419ca7d.svg",
     "static/media/accept.svg": "/DashBoard_Hotel-Miranda/static/media/accept.083856526c4794262e146cbb1c4b6c16.svg",
     "static/media/deny.svg": "/DashBoard_Hotel-Miranda/static/media/deny.e2505eefb2de01603c67a899712fbb67.svg",
     "index.html": "/DashBoard_Hotel-Miranda/index.html",
@@ -24,12 +25,12 @@
     "static/media/checkout.svg": "/DashBoard_Hotel-Miranda/static/media/checkout.3900af3955e7891fbff745d07c938ee1.svg",
     "static/media/dashboard.svg": "/DashBoard_Hotel-Miranda/static/media/dashboard.8fca957e29c5c1981593dc2f4ec34685.svg",
     "static/media/search.svg": "/DashBoard_Hotel-Miranda/static/media/search.ecdf8ec7c4f054fbcbfe4af53be7c8a2.svg",
-    "main.d73c1067.css.map": "/DashBoard_Hotel-Miranda/static/css/main.d73c1067.css.map",
-    "main.628b5b57.js.map": "/DashBoard_Hotel-Miranda/static/js/main.628b5b57.js.map",
+    "main.85676924.css.map": "/DashBoard_Hotel-Miranda/static/css/main.85676924.css.map",
+    "main.ab8d4046.js.map": "/DashBoard_Hotel-Miranda/static/js/main.ab8d4046.js.map",
     "787.42fd7b3a.chunk.js.map": "/DashBoard_Hotel-Miranda/static/js/787.42fd7b3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d73c1067.css",
-    "static/js/main.628b5b57.js"
+    "static/css/main.85676924.css",
+    "static/js/main.ab8d4046.js"
   ]
 }

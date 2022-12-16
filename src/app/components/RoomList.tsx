@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { reorder } from './ReviewsList';
+import { reorder } from '../modules';
 import { FlexCol } from '../styles';
 
-const guests = [
+const rooms = [
     {
         id: 1,
         check: false,
@@ -29,7 +29,7 @@ const guests = [
 ]
 
 const GuestList = () => {
-    const [guestList, setGuestList] = useState(guests);
+    const [roomsList, setRoomList] = useState(rooms);
 
 return (
    
@@ -46,8 +46,8 @@ return (
                       return;
                     }
 
-                    setGuestList((prevReviews) =>
-                      reorder(prevReviews, source.index, destination.index)
+                    setRoomList((prevRooms) =>
+                      reorder(prevRooms, source.index, destination.index)
                     );
                 console.log({result})
             }}
@@ -72,8 +72,8 @@ return (
                             ref={droppableProvided.innerRef}
                             className="task-container"
                         >
-                            {guestList.map((guest, index) => (
-                                <Draggable key={guest.id} draggableId={String(guest.id)} index={index}>
+                            {roomsList.map((room, index) => (
+                                <Draggable key={room.id} draggableId={String(room.id)} index={index}>
                                     {(draggableProvided) => (
                                         <tr
                                             {...draggableProvided.draggableProps}
@@ -82,13 +82,13 @@ return (
                                             className="task-item align-top"
                                         >
                                             <td className="w-[5%]"><input className="scale-150" type="checkbox" /></td>
-                                            <td className="w-3/12"><div className="info flex gap-x-5"><img className='max-w-[120px] rounded' src={guest.image} alt="" /><FlexCol><span>{guest.id}</span><span>{guest.nameRoom}</span></FlexCol></div></td>
-                                            <td className="w-1/12">{guest.bedType}</td>
-                                            <td className="w-1/12">{guest.roomFloor}</td>
-                                            <td className="w-2/12"><p>{guest.facilities}</p></td>
-                                            <td className="w-1/12">{guest.rate}</td>
+                                            <td className="w-3/12"><div className="info flex gap-x-5"><img className='max-w-[120px] rounded' src={room.image} alt="" /><FlexCol><span>{room.id}</span><span>{room.nameRoom}</span></FlexCol></div></td>
+                                            <td className="w-1/12">{room.bedType}</td>
+                                            <td className="w-1/12">{room.roomFloor}</td>
+                                            <td className="w-2/12"><p>{room.facilities}</p></td>
+                                            <td className="w-1/12">{room.rate}</td>
                                             <td className="w-[2%]">{
-                                                guest.status == false ? <span>Booked</span> : <span>Available</span>
+                                                room.status == false ? <span>Booked</span> : <span>Available</span>
                                             }</td>
                                             <td className="w-1/12">X</td>
                                         </tr>

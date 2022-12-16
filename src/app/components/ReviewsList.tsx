@@ -2,18 +2,13 @@ import React, { useState } from "react";
 import { Tab } from '@headlessui/react'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Table } from "../styles";
-
+import { reorder } from "../modules";
 import {ReactComponent as Start} from "../../assets/svg/star.svg";
+import ReactPaginate from 'react-paginate';
+import PaginatedItems from "./PaginatedItems";
 
-export const reorder = (list: any, startIndex: any, endIndex:any) => {
-  const result = [...list];
-  const [removed] = result.splice(startIndex, 1);
-  result.splice(endIndex, 0, removed);
 
-  return result;
-};
-
-const initialTasks = [
+const reviewsList = [
   {
     id: 1,
     check: false,
@@ -57,9 +52,10 @@ const initialTasks = [
 ];
 
 const ReviewsList = () => {
-    const [reviews, setReviews] = useState(initialTasks);
+    const [reviews, setReviews] = useState(reviewsList);
 
   return (
+    <>
     <DragDropContext
             onDragEnd={(result) => {
                   const { source, destination } = result;
@@ -133,8 +129,15 @@ const ReviewsList = () => {
                         </tbody>
                     )}
                 </Droppable>
+                
             </table>
         </DragDropContext>
+        {
+          // @ts-ignore
+          <PaginatedItems items={reviews} itemsPerPage={3}/>
+        }
+    </>
+        
   );
 };
 

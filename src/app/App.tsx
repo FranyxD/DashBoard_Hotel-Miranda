@@ -19,8 +19,10 @@ import LogIn from "./pages/LogIn";
 import PrivateRoute from "./components/PrivateRoute";
 import Guest from "./pages/Rooms";
 import Concierge from "./pages/Concierge";
-import GuestList from "./pages/GuestList";
 import Rooms from "./pages/Rooms";
+import Guests from "./pages/Guests";
+
+import { loginProp } from "./interfaces";
 
 const App:any = () => {
 
@@ -45,6 +47,7 @@ const App:any = () => {
       setDarkMode(darkMode);
     }
   }, []);
+  
  const changeTheme = () => {
   localStorage.theme = darkMode ? "light" : "dark";
   setDarkMode(!darkMode);
@@ -69,9 +72,7 @@ const App:any = () => {
     </>
   );
 
-  interface loginProp {
-    login: string
-  }
+ 
 
   return (
     <>
@@ -91,7 +92,7 @@ const App:any = () => {
                 <Route path="/guestdetails" element={<GuestDetails />} />
                 <Route path="/reviews" element={<Reviews />} />
                 <Route path="/guests:guest" element={<Guest/>} />
-                <Route path="/guests" element={<GuestList/>} />
+                <Route path="/guests" element={<Guests/>} />
                 <Route path="/concierge" element={<Concierge />} />
                 <Route path="/rooms" element={<Rooms />} />
               </>

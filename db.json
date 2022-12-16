@@ -26,6 +26,106 @@
       "id": 6
     }
   ],
+  "bookings": [
+    {
+      "id": 1,
+      "image": "https://www.hazunaweb.com/imagenes/prueba.jpg",
+      "name": "Nombre Apellido",
+      "orderDate": "fecha pedido",
+      "checkIn": "Fecha entrada",
+      "checkOut": "Fecha salida",
+      "specialRequest": "Descripcion nota",
+      "roomType": {
+        "type": "deluxe",
+        "numRoom": "02"
+      },
+      "status": "Booked"
+    },
+    {
+      "id": 2,
+      "image": "https://www.hazunaweb.com/imagenes/prueba.jpg",
+      "name": "Nombre Apellido",
+      "orderDate": "fecha pedido",
+      "checkIn": "Fecha entrada",
+      "checkOut": "Fecha salida",
+      "specialRequest": "Descripcion nota",
+      "roomType": {
+        "type": "deluxe",
+        "numRoom": "02"
+      },
+      "status": "Refund"
+    },
+    {
+      "id": 3,
+      "image": "https://www.hazunaweb.com/imagenes/prueba.jpg",
+      "name": "Nombre Apellido",
+      "orderDate": "fecha pedido",
+      "checkIn": "Fecha entrada",
+      "checkOut": "Fecha salida",
+      "specialRequest": "Descripcion nota",
+      "roomType": {
+        "type": "deluxe",
+        "numRoom": "02"
+      },
+      "status": "Progress"
+    },
+    {
+      "id": 4,
+      "image": "https://www.hazunaweb.com/imagenes/prueba.jpg",
+      "name": "Nombre Apellido",
+      "orderDate": "fecha pedido",
+      "checkIn": "Fecha entrada",
+      "checkOut": "Fecha salida",
+      "specialRequest": "Descripcion nota",
+      "roomType": {
+        "type": "deluxe",
+        "numRoom": "02"
+      },
+      "status": "Progress"
+    },
+    {
+      "id": 5,
+      "image": "https://www.hazunaweb.com/imagenes/prueba.jpg",
+      "name": "Nombre Apellido",
+      "orderDate": "fecha pedido",
+      "checkIn": "Fecha entrada",
+      "checkOut": "Fecha salida",
+      "specialRequest": "Descripcion nota",
+      "roomType": {
+        "type": "deluxe",
+        "numRoom": "02"
+      },
+      "status": "Progress"
+    },
+    {
+      "id": 6,
+      "image": "https://www.hazunaweb.com/imagenes/prueba.jpg",
+      "name": "Nombre Apellido",
+      "orderDate": "fecha pedido",
+      "checkIn": "Fecha entrada",
+      "checkOut": "Fecha salida",
+      "specialRequest": "Descripcion nota",
+      "roomType": {
+        "type": "deluxe",
+        "numRoom": "02"
+      },
+      "status": "Progress"
+    },
+    {
+      "id": 7,
+      "image": "https://www.hazunaweb.com/imagenes/prueba.jpg",
+      "name": "Nombre Apellido",
+      "orderDate": "fecha pedido",
+      "checkIn": "Fecha entrada",
+      "checkOut": "Fecha salida",
+      "specialRequest": "Descripcion nota",
+      "roomType": {
+        "type": "deluxe",
+        "numRoom": "02"
+      },
+      "status": "Progress"
+    }
+  ],
   "reviews" : [
     {
       "id": 1,

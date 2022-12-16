@@ -34,20 +34,23 @@ const Sidebar = ({darkMode, changeTheme}:SidebarProps) => {
             <NavLink to="/">DashBoard</NavLink>
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
-            <Key className="h-6 w-6 fill-green-600" />
-            <NavLink to="/rooms">Rooms</NavLink>
-          </li>
-          <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
+            
             <Booking className="h-6 w-6 fill-green-600" />
-            Bookings
+            <NavLink to="/bookings">Bookings</NavLink>
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
-            <Guest className="h-6 w-6 fill-green-600" />
-            <NavLink to="/guests">Guest</NavLink>
+           
+          <Key className="h-6 w-6 fill-green-600" />
+            <NavLink to="/rooms">Room</NavLink>
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
+            
             <Concierge className="h-6 w-6 fill-green-600" />
-            <NavLink to="/Concierge">Concierge</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
+          <Guest className="h-6 w-6 fill-green-600" />
+            <NavLink to="/users">Users</NavLink>
           </li>
         </ul>
       </nav>
@@ -59,12 +62,12 @@ const Sidebar = ({darkMode, changeTheme}:SidebarProps) => {
           src={profile}
           alt="icon contact us"
         />
-        <span className="pt-10 text-center text-[16px]">William Johanson</span>
+        <span className="pt-10 text-center text-[16px]">Francisco Fuertes</span>
         <a className="mb-[5%] text-[8px]" href="">
           email@email.com
         </a>
         <button className="rounded bg-myGreen py-[5%] px-[15%] text-[14px] font-bold text-green-800">
-          Contact Us
+          Edit
         </button>
       </div>
       {/* SWITCH THEME MODE */}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "./Tabs";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { reorder } from "../modules";
+import { reorder } from "../utils/hooks";
 import { FlexCol } from "../styles";
 
 const guests = [

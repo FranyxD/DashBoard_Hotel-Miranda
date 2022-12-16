@@ -6,7 +6,7 @@ const Concierge = () => {
 
     return (
         <main className='concierge p-[2.5%] bg-white dark:bg-black dark:text-white'>
-            <Tabs componente={<ConciergeList/>}/>
+            {/* <Tabs componente={<ConciergeList/>}/> */}
         </main>
     )
 }

@@ -16,6 +16,7 @@ import { ReactComponent as Accept} from "../../assets/svg/accept.svg";
 import { ReactComponent as Deny} from "../../assets/svg/deny.svg";
 import Reviews from "./Reviews";
 import { NavLink } from "react-router-dom";
+import Slider from "../components/Slider";
 
 
 const Dashboard = () => {
@@ -100,25 +101,8 @@ const Dashboard = () => {
       <section className="latest-reviews mb-[5%] dark:bg-myBlack">
         <div className="first flex justify-between">
         <h2 className="mb-[2.5%] text-xl">Latest Review By Customers</h2>
-        <NavLink to="/reviews">Show more</NavLink>
         </div>
-        <div className="reviews flex gap-[5%]">
-          {
-            [1, 2, 3].map(item => <article>
-
-              <p className="mb-[5%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, perspiciatis dignissimos dolor et autem veritatis</p>
-              <div className="person flex items-center gap-[5%]">
-                <img className="h-12 w-12 rounded object-cover" src={profile} alt="" />
-                <div className="data flex flex-col place-items-center">
-                  <h5 className="text-sm text-center">Kusnaidi Anderson</h5>
-                  <span className="text-[12px]">4m ago</span>
-                </div>
-                <Accept className="w-6 h-6"/>
-                <Deny className="w-6 h-6"/>
-              </div>
-            </article>)
-          }
-        </div>
+        <Slider/>
       </section>
 
       

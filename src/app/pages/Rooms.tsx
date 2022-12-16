@@ -10,7 +10,7 @@ const Rooms = () => {
     }
     return (
         <main className='p-[2.5%] bg-white dark:bg-black dark:text-white'>
-            <Tabs componente={listguest}/>
+            {/* <Tabs componente={listguest}/> */}
             
         </main>
     )

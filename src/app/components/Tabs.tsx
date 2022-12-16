@@ -7,49 +7,29 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Tabs = ({componente}:any) => {
+const Tabs = ({tabs, componentes}:any) => {
   return (
     <Tab.Group>
-        {/* All customers reviews */}
+      {/* All customers reviews */}
       <Tab.List className="mb-[3%] mt-[5%] flex gap-x-5 text-myGreen">
-        <Tab
-          className={({ selected }) =>
-            classNames(
-              "border-b-2 pb-3 outline-none ",
-              selected ? "border-myGreen" : "border-white"
-            )
-          }
-        >
-          All customers reviews
-        </Tab>
-        {/* Revised */}
-        <Tab
-          className={({ selected }) =>
-            classNames(
-              "border-b-2 pb-3 outline-none ",
-              selected ? "border-myGreen" : "border-white"
-            )
-          }
-        >
-          Revised
-        </Tab>
-        {/* Archived */}
-        <Tab
-          className={({ selected }) =>
-            classNames(
-              "border-b-2 pb-3 outline-none ",
-              selected ? "border-myGreen" : "border-white"
-            )}>Archived</Tab>
+        {tabs.map((item: string, index: number) => (
+          <Tab key={item}
+            className={({ selected }) =>
+              classNames(
+                "border-b-2 pb-3 outline-none ",
+                selected ? "border-myGreen" : "border-white"
+              )
+            }
+          >
+            {item}
+          </Tab>
+        ))}
       </Tab.List>
       <Tab.Panels>
-        {/* All customers reviews */}
-        <Tab.Panel>
-          {componente}
-          {/* Revised */}
-        </Tab.Panel>
-        <Tab.Panel>{componente}</Tab.Panel>
-        {/* Archived */}
-        <Tab.Panel>{componente}</Tab.Panel>
+        {
+          // @ts-ignore
+          componentes.map((item, index) => <Tab.Panel key={index}>{item}</Tab.Panel>)
+        }
       </Tab.Panels>
     </Tab.Group>
   );

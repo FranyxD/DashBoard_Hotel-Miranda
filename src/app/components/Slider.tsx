@@ -1,26 +1,13 @@
-import React from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import '../layout/swiper.css';
-// import required modules
 import { Pagination } from "swiper";
 
 import { ReactComponent as Accept} from "../../assets/svg/accept.svg";
 import { ReactComponent as Deny} from "../../assets/svg/deny.svg";
-import ReviewsList from "../components/ReviewsList";
-import Tabs from "../components/Tabs";
 
-const Reviews = () => {
-  const reviewsTabs = () => {
-    return <ReviewsList/>
-  }
-  return (
-    <main className="p-[2.5%] bg-white dark:bg-black dark:text-white">
-      <section className="">
+const Slider = () => {
+
+    return (
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
@@ -46,19 +33,8 @@ const Reviews = () => {
             </SwiperSlide>)
           }
         </Swiper>
-      </section>
+    )
 
-      
-        <section>
-          {// @ts-ignore
-          // <Tabs componente={reviewsTabs}/>
-          }
-        
-        </section>
-        
-      
-    </main>
-  );
-};
+}
 
-export default Reviews;
+export default Slider;

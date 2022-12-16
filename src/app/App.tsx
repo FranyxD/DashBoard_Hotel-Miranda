@@ -23,12 +23,14 @@ import Rooms from "./pages/Rooms";
 import Guests from "./pages/Guests";
 
 import { loginProp } from "./interfaces";
+import Bookings from "./pages/Bookings";
 
 const App:any = () => {
 
   const [login, setLogin] = useState(
     localStorage.getItem("login") ? localStorage.getItem("login") : "false"
   );
+  
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -89,9 +91,9 @@ const App:any = () => {
                   path="/DashBoard_Hotel-Miranda"
                   element={<Dashboard />}
                 />
-                <Route path="/guestdetails" element={<GuestDetails />} />
+                <Route path="/bookings" element={<Bookings />} />
                 <Route path="/reviews" element={<Reviews />} />
-                <Route path="/guests:guest" element={<Guest/>} />
+                <Route path="/guest" element={<GuestDetails/>} />
                 <Route path="/guests" element={<Guests/>} />
                 <Route path="/concierge" element={<Concierge />} />
                 <Route path="/rooms" element={<Rooms />} />

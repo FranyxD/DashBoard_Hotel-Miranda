@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { reorder } from "../modules";
+import { reorder } from "../utils/hooks";
 import { FlexCol } from "../styles";
 
 const concierges = [
@@ -33,22 +33,22 @@ const ConciergeList = () => {
 
     return (
         <DragDropContext
-      onDragEnd={(result) => {
-        const { source, destination } = result;
-        if (!destination) {
-          return;
-        }
-        if (
-          source.index === destination.index &&
-          source.droppableId === destination.droppableId
-        ) {
-          return;
-        }
+          onDragEnd={(result) => {
+            const { source, destination } = result;
+            if (!destination) {
+              return;
+            }
+            if (
+              source.index === destination.index &&
+              source.droppableId === destination.droppableId
+            ) {
+              return;
+            }
 
-        setConciergeList((prevConcierges) =>
-          reorder(prevConcierges, source.index, destination.index)
-        );
-        console.log({ result });
+            setConciergeList((prevConcierges) =>
+              reorder(prevConcierges, source.index, destination.index)
+            );
+            console.log({ result });
       }}
     >
       <table className="reviews w-full rounded bg-myBlack text-left">

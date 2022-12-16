@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Tab } from '@headlessui/react'
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { Table } from "../styles";
-import { reorder } from "../modules";
+import { reorder } from "../utils/hooks";
 import {ReactComponent as Start} from "../../assets/svg/star.svg";
 import ReactPaginate from 'react-paginate';
 import PaginatedItems from "./PaginatedItems";
@@ -49,6 +49,16 @@ const reviewsList = [
     action: null,
     text: "React.js",
   },
+  {
+    id: 5,
+    check: false,
+    date: "nov 8",
+    customer: "someone",
+    stars: 5,
+    comment: "Lorem ipsum dolor sit amet, consectetur adipis",
+    action: null,
+    text: "React.js",
+  },
 ];
 
 const ReviewsList = () => {
@@ -76,7 +86,7 @@ const ReviewsList = () => {
             }}
         >
             <table  className="reviews w-full bg-myBlack rounded text-left">
-                <thead className="head align-top w-ful">
+                <thead className="head align-top w-full">
                   <tr>
                   <th><input type="checkbox" className="scale-150" /></th>
                   <th>Order_ID</th>

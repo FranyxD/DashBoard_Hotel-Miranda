@@ -5,7 +5,7 @@ import { Table } from "../styles";
 
 import {ReactComponent as Start} from "../../assets/svg/star.svg";
 
-const reorder = (list: any, startIndex: any, endIndex:any) => {
+export const reorder = (list: any, startIndex: any, endIndex:any) => {
   const result = [...list];
   const [removed] = result.splice(startIndex, 1);
   result.splice(endIndex, 0, removed);

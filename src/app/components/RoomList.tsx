@@ -1,18 +1,30 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import { reorder } from './ReviewsList';
+import { FlexCol } from '../styles';
 
 const guests = [
     {
         id: 1,
-        firstName: 'John',
-        lastName: 'Doe',
-        phone: '(999) 999-999-9999',
+        check: false,
+        image: 'https://www.hazunaweb.com/imagenes/prueba.jpg',
+        nameRoom: "room name",
+        bedType: "tipo habitacion",
+        roomFloor: "floor a-1",
+        facilities: "AC. shower, double bed, towel, bathurp",
+        rate: "$145/night",
+        status: false
     },
     {
         id: 2,
-        firstName: 'John',
-        lastName: 'Doe',
-        phone: '(999) 999-999-9999',
+        check: false,
+        image: 'https://www.hazunaweb.com/imagenes/prueba.jpg',
+        nameRoom: "room name",
+        bedType: "tipo habitacion",
+        roomFloor: "floor a-1",
+        facilities: "AC. shower, double bed, towel, bathurp",
+        rate: "$145/night",
+        status: false
     }
 ]
 
@@ -20,6 +32,7 @@ const GuestList = () => {
     const [guestList, setGuestList] = useState(guests);
 
 return (
+   
     <DragDropContext
             onDragEnd={(result) => {
                   const { source, destination } = result;
@@ -33,7 +46,7 @@ return (
                       return;
                     }
 
-                    setReviews((prevReviews) =>
+                    setGuestList((prevReviews) =>
                       reorder(prevReviews, source.index, destination.index)
                     );
                 console.log({result})
@@ -43,11 +56,12 @@ return (
                 <thead className="head align-top w-ful">
                   <tr>
                   <th><input type="checkbox" className="scale-150" /></th>
-                  <th>Order_ID</th>
-                  <th>Date</th>
-                  <th>Customer</th>
-                  <th>Commented</th>
-                  <th>Action</th>
+                  <th>Room name</th>
+                  <th>Bed Type</th>
+                  <th>Room Floor</th>
+                  <th>Facilities</th>
+                  <th>Rate</th>
+                  <th>Status</th>
                   </tr>
                 </thead>
                 
@@ -68,23 +82,15 @@ return (
                                             className="task-item align-top"
                                         >
                                             <td className="w-[5%]"><input className="scale-150" type="checkbox" /></td>
-                                            <td className="w-1/12">#{guest.id}</td>
-                                            <td className="w-2/12">{guest.date}</td>
-                                            <td className="w-1/12">{guest.customer}</td>
-                                            <td className="w-4/12">
-                                              <div className="comment">
-                                                <div className="stars flex gap-x-1 mb-2">
-                                                  {guest.stars && [...Array(guest.stars)].map((star, index) => <Start className="w-4" key={index}/>)}
-                                                </div>
-                                              <p className="h-24 overflow-auto">{guest.comment}</p>
-                                              </div>
-                                              </td>
-                                            <td className="w-2/12">
-                                            <div className="actions flex gap-x-5">
-                                            <button className="text-myGreen">Publish</button>
-                                            <button className="text-myRed">Archive</button>
-                                            </div>
-                                            </td>
+                                            <td className="w-3/12"><div className="info flex gap-x-5"><img className='max-w-[120px] rounded' src={guest.image} alt="" /><FlexCol><span>{guest.id}</span><span>{guest.nameRoom}</span></FlexCol></div></td>
+                                            <td className="w-1/12">{guest.bedType}</td>
+                                            <td className="w-1/12">{guest.roomFloor}</td>
+                                            <td className="w-2/12"><p>{guest.facilities}</p></td>
+                                            <td className="w-1/12">{guest.rate}</td>
+                                            <td className="w-[2%]">{
+                                                guest.status == false ? <span>Booked</span> : <span>Available</span>
+                                            }</td>
+                                            <td className="w-1/12">X</td>
                                         </tr>
                                     )}
                                 </Draggable>
@@ -95,6 +101,7 @@ return (
                 </Droppable>
             </table>
         </DragDropContext>
+        
 )
 
 

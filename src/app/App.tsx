@@ -17,7 +17,10 @@ import GuestDetails from "./pages/GuestDetails";
 import Reviews from "./pages/Reviews";
 import LogIn from "./pages/LogIn";
 import PrivateRoute from "./components/PrivateRoute";
-import Guest from "./pages/Guest";
+import Guest from "./pages/Rooms";
+import Concierge from "./pages/Concierge";
+import GuestList from "./pages/GuestList";
+import Rooms from "./pages/Rooms";
 
 const App:any = () => {
 
@@ -87,7 +90,10 @@ const App:any = () => {
                 />
                 <Route path="/guestdetails" element={<GuestDetails />} />
                 <Route path="/reviews" element={<Reviews />} />
-                <Route path="/guest" element={<Guest/>} />
+                <Route path="/guests:guest" element={<Guest/>} />
+                <Route path="/guests" element={<GuestList/>} />
+                <Route path="/concierge" element={<Concierge />} />
+                <Route path="/rooms" element={<Rooms />} />
               </>
             ) : (
               // @ts-ignore

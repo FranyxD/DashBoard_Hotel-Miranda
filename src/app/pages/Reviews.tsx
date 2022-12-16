@@ -51,7 +51,7 @@ const Reviews = () => {
       
         <section>
           {// @ts-ignore
-          <Tabs reviewsTabs={reviewsTabs}/>
+          <Tabs componente={reviewsTabs}/>
           }
         
         </section>

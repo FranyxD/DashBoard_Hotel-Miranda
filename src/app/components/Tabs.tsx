@@ -7,7 +7,7 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-const Tabs = ({reviewsTabs}:any) => {
+const Tabs = ({componente}:any) => {
   return (
     <Tab.Group>
         {/* All customers reviews */}
@@ -44,12 +44,12 @@ const Tabs = ({reviewsTabs}:any) => {
       <Tab.Panels>
         {/* All customers reviews */}
         <Tab.Panel>
-          {reviewsTabs}
+          {componente}
           {/* Revised */}
         </Tab.Panel>
-        <Tab.Panel>{reviewsTabs}</Tab.Panel>
+        <Tab.Panel>{componente}</Tab.Panel>
         {/* Archived */}
-        <Tab.Panel>{reviewsTabs}</Tab.Panel>
+        <Tab.Panel>{componente}</Tab.Panel>
       </Tab.Panels>
     </Tab.Group>
   );

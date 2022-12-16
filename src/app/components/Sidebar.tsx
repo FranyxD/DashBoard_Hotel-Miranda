@@ -35,7 +35,7 @@ const Sidebar = ({darkMode, changeTheme}:SidebarProps) => {
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Key className="h-6 w-6 fill-green-600" />
-            <NavLink to="/guestdetails">Rooms</NavLink>
+            <NavLink to="/rooms">Rooms</NavLink>
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Booking className="h-6 w-6 fill-green-600" />
@@ -43,11 +43,11 @@ const Sidebar = ({darkMode, changeTheme}:SidebarProps) => {
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Guest className="h-6 w-6 fill-green-600" />
-            <NavLink to="/Guest">Guest</NavLink>
+            <NavLink to="/guests">Guest</NavLink>
           </li>
           <li className="flex w-full gap-[5%] pl-[15%] text-myGreen hover:rounded-l-sm hover:border-l-4  hover:border-red-500">
             <Concierge className="h-6 w-6 fill-green-600" />
-            Concierge
+            <NavLink to="/Concierge">Concierge</NavLink>
           </li>
         </ul>
       </nav>
